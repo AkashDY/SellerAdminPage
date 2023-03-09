@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Seller Admin Page</title>
+  </head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <body style="background-color:lightgray;">
+
+
+    <h1 style="text-align: center;">Enter Product Details</h1><br>
+    <form onsubmit="submitdetails(event)" style="text-align: center;">
+      <label for="sprice">Selling Price:</label>
+      <input type="number" id="sprice" name="sprice" required placeholder="Enter Product Price">&nbsp;&nbsp;&nbsp;
+
+      <label for="pname">Product Name:</label>
+      <input placeholder="Enter Product Name" type="text" required id="pname" name="pname" >&nbsp;&nbsp;&nbsp;
+
+      <label for="select">Select Category:</label>
+      <select id="select" name="select">
+          <option value="mobile">Mobile</option>
+          <option value="food">Food</option>
+          <option value="fashion">Fashion</option>
+      </select>&nbsp;&nbsp;&nbsp;
+
+      <input type="submit" value="Add Product" style="color: white; background-color: black; border-radius: 5px;">
+    </form><br><br>
+  
+    <h2 style="padding-left: 20px; color: black;">1. Mobile Products</h2>
+    <ul id="mobilelist"></ul>
+  
+    <h2 style="padding-left: 20px; color: black;">2. Food Products</h2>
+    <ul id="foodlist"></ul>
+  
+    <h2 style="padding-left: 20px; color: black;">3. Fashion Products</h2>
+    <ul id="fashionlist"></ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
